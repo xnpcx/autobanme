@@ -9,6 +9,14 @@ sudo mkdir /opt/autoban
 
  sudo chmod +x /etc/init.d/autoban
 
+ apt-get install nginx
+
+ history -c
+
+ apt-get install python
+
+ history -c
+
  sudo /sbin/chkconfig autoban --add
 
  sudo /sbin/chkconfig autoban on
