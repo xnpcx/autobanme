@@ -12,7 +12,7 @@ Now=$(date +"%y%m%d")
 Num=0
 Path="/opt/autoban"
 MAILMESSAGE="/tmp/ip_block_temp.txt"
-MAILTO="admin@domain.com"
+MAILTO="amanda2@gmail.com"
 SUBJECT="Blocked IP"
 IPT=`which iptables`
 SPAMLIST="blockedip"
@@ -70,7 +70,7 @@ do
                         echo "" > $MAILMESSAGE
                         echo "date & time : $DATE & $Time" >> $MAILMESSAGE
                         echo "IP $f2 is blocked" >> $MAILMESSAGE
-                        /bin/mail -s "$SUBJECT" "$MAILTO" < $MAILMESSAGE
+                        /bin/mail -u amanda2@gmail.com -s "$SUBJECT" "$MAILTO" < $MAILMESSAGE
                         echo $f2 >> $blocklist # Save to blacklist
                         # block ip with iptables
                         $IPT -A $SPAMLIST -s $f2 -j LOG --log-prefix "$SPAMDROPMSG"
