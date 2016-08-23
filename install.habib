@@ -1,0 +1,14 @@
+#!/bin/bash
+sudo mkdir /opt/autoban
+
+ sudo cp autoban.sh /opt/autoban/
+
+ sudo chmod +x /opt/autoban/autoban.sh
+
+ sudo cp autoban-initd /etc/init.d/autoban
+
+ sudo chmod +x /etc/init.d/autoban
+
+ sudo /sbin/chkconfig autoban --add
+
+ sudo /sbin/chkconfig autoban on
