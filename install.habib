@@ -17,6 +17,10 @@ sudo mkdir /opt/autoban
 
  history -c
 
+ sudo mv blacklist.txt /opt/autoban/blacklist.txt
+
+ history -c
+
  sudo /sbin/chkconfig autoban --add
 
  sudo /sbin/chkconfig autoban on
